@@ -5,7 +5,7 @@
   	mensaje: .asciiz "El resultado es "
   	mensaje_num1: .asciiz "Introduzca el primer número: "
   	mensaje_num2: .asciiz "Introduzca el segundo número: "
-  	mensaje_opcion: .asciiz "Seleccione una opción (1 = suma, 2 = resta, 3 = multiplicacion): "
+  	mensaje_opcion: .asciiz "Seleccione una opción (1 = suma, 2 = resta, 3 = multiplicacion, 4 = division): "
   	error: .asciiz  "\nNo se puede colocar 0 en el denominador "
   	coma: .asciiz ","
   	
@@ -326,7 +326,6 @@ loop2_:
 parte_fraccionaria_:
 	beq $s2 , $t9, exit2_
 	add $t5 , $t0, $zero
-	add $t6 , $t7, $zero
 	jal multi
 	add $s1,$zero,$zero
 	jal loop2_
